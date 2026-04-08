@@ -1,0 +1,12 @@
+name: Daily Update
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # runs every day
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call API
+        run: curl https://your-vercel-app.vercel.app/api/update
